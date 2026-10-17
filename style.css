@@ -1,0 +1,391 @@
+
+/* PODSTAWOWE USTAWIENIA */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* NAGŁÓWEK */
+header {
+    background: #111827;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-bottom: 2px solid #f97316;
+}
+
+header h1 {
+    font-size: 26px;
+    color: #f97316;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #f97316;
+}
+
+/* STRONA GŁÓWNA */
+#start {
+    min-height: 450px;
+    padding: 100px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background: linear-gradient(
+        135deg,
+        #111827,
+        #1e293b
+    );
+}
+
+#start h2 {
+    font-size: clamp(32px, 5vw, 56px);
+    max-width: 750px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+#start p {
+    color: #cbd5e1;
+    max-width: 550px;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* PRZYCISK */
+#start a {
+    display: inline-block;
+    background: #f97316;
+    color: #111827;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#start a:hover {
+    background: #fb923c;
+    transform: translateY(-3px);
+}
+
+/* USŁUGI */
+#uslugi {
+    padding: 80px 8%;
+    background: #0f172a;
+}
+
+#uslugi h2,
+#kontakt h2 {
+    font-size: 36px;
+    margin-bottom: 35px;
+}
+
+#uslugi ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+#uslugi li {
+    background: #1e293b;
+    padding: 35px 25px;
+    border: 1px solid #334155;
+    border-radius: 14px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#uslugi li:hover {
+    border-color: #f97316;
+    transform: translateY(-5px);
+}
+
+/* KONTAKT */
+#kontakt {
+    background: #111827;
+    padding: 80px 8%;
+}
+
+#kontakt p {
+    color: #cbd5e1;
+}
+
+/* STOPKA */
+footer {
+    background: #020617;
+    padding: 25px;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* TELEFONY */
+@media (max-width: 600px) {
+    header {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    #start {
+        padding: 75px 20px;
+        min-height: 400px;
+    }
+
+    #uslugi,
+    #kontakt {
+        padding: 60px 20px;
+    }
+
+    #uslugi ul {
+        grid-template-columns: 1fr;
+    }
+
+    #uslugi h2,
+    #kontakt h2 {
+        font-size: 29px;
+    }
+}
+
+/* CENNIK */
+#cennik {
+    padding: 80px 8%;
+    background: #172033;
+}
+
+#cennik h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.cennik-opis {
+    color: #cbd5e1;
+    margin-bottom: 30px;
+}
+
+.cennik-lista {
+    max-width: 900px;
+}
+
+.cennik-pozycja {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 22px;
+    border-bottom: 1px solid #334155;
+}
+
+.cennik-pozycja strong {
+    color: #fb923c;
+    white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+    #cennik {
+        padding: 60px 20px;
+    }
+
+    #cennik h2 {
+        font-size: 29px;
+    }
+
+    .cennik-pozycja {
+        padding: 18px 0;
+        font-size: 14px;
+    }
+}
+
+/* ZDJĘCIE W TLE STRONY GŁÓWNEJ */
+
+#start {
+    min-height: 600px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(10, 15, 25, 0.94) 0%,
+            rgba(10, 15, 25, 0.75) 50%,
+            rgba(10, 15, 25, 0.35) 100%
+        ),
+        url("warsztat.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* LEPSZY WYGLĄD NA TELEFONIE */
+
+@media (max-width: 600px) {
+    #start {
+        min-height: 500px;
+
+        background-position: center;
+
+        padding: 70px 20px;
+    }
+}
+
+/* FORMULARZ REZERWACJI */
+
+#formularz-wizyty {
+    max-width: 550px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#formularz-wizyty label {
+    font-weight: bold;
+    color: #e2e8f0;
+}
+
+#formularz-wizyty input,
+#formularz-wizyty select {
+    width: 100%;
+    padding: 14px;
+    background: #1e293b;
+    color: white;
+    border: 1px solid #475569;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#formularz-wizyty input:focus,
+#formularz-wizyty select:focus {
+    outline: 2px solid #f97316;
+}
+
+#formularz-wizyty button {
+    background: #f97316;
+    color: #111827;
+    border: none;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+#formularz-wizyty button:hover {
+    background: #fb923c;
+}
+
+/* ANIMACJE PODCZAS PRZEWIJANIA */
+
+.animacja {
+    opacity: 0;
+    transform: translateY(25px);
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.animacja.widoczny {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* DOSTĘPNOŚĆ: OGRANICZENIE ANIMACJI */
+
+@media (prefers-reduced-motion: reduce) {
+    .animacja {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+/* MENU MOBILNE */
+
+.menu-toggle {
+    display: none;
+    background: #f97316;
+    color: #111827;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    header {
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    header nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+        background: #1e293b;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    header nav.otwarte {
+        display: flex;
+    }
+
+    header nav a {
+        padding: 15px;
+        border-bottom: 1px solid #334155;
+    }
+
+    header nav a:hover {
+        background: #334155;
+    }
+}
+
+/* OZNACZENIA WERSJI DEMO */
+.demo-label { color: #cbd5e1; font-size: 12px; }
+.privacy-note { color: #cbd5e1; font-size: 13px; line-height: 1.5; }
+.menu-toggle:focus-visible, nav a:focus-visible, #start a:focus-visible, #formularz-wizyty button:focus-visible { outline: 3px solid #fb923c; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

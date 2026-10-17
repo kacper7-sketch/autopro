@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>AutoPro | Serwis Samochodowy (Demo)</title>
+    <meta name="description" content="Demonstracyjna strona internetowa warsztatu samochodowego AutoPro. Portfolio projektu HTML, CSS i JavaScript.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🔧 AutoPro Serwis</h1>
+        <span class="demo-label">Projekt demonstracyjny</span>
+
+       
+<button
+    class="menu-toggle"
+    type="button"
+    aria-label="Otwórz menu"
+    aria-expanded="false"
+    aria-controls="menu"
+>
+    ☰
+</button>
+
+<nav id="menu">
+    <a href="#start">Start</a>
+    <a href="#uslugi">Usługi</a>
+    <a href="#cennik">Cennik</a>
+    <a href="#kontakt">Kontakt</a>
+</nav>
+
+    </header>
+
+    <main>
+        <section id="start">
+            <h2>Twój samochód w dobrych rękach</h2>
+            <p>
+                Profesjonalny serwis samochodowy.
+                Naprawy, diagnostyka i przeglądy.
+            </p>
+
+            <a href="#kontakt">Umów wizytę</a>
+        </section>
+
+        <section id="uslugi">
+            <h2>Nasze usługi</h2>
+
+            <ul>
+                <li>Wymiana oleju</li>
+                <li>Diagnostyka komputerowa</li>
+                <li>Naprawa hamulców</li>
+                <li>Serwis klimatyzacji</li>
+            </ul>
+        </section>
+
+        
+<section id="cennik">
+    <h2>Cennik usług</h2>
+    <p class="cennik-opis">
+        Przykładowe ceny usług serwisowych.
+    </p>
+
+    <div class="cennik-lista">
+        <div class="cennik-pozycja">
+            <span>Wymiana oleju</span>
+            <strong>od 100 zł</strong>
+        </div>
+
+        <div class="cennik-pozycja">
+            <span>Diagnostyka komputerowa</span>
+            <strong>od 120 zł</strong>
+        </div>
+
+        <div class="cennik-pozycja">
+            <span>Wymiana klocków hamulcowych</span>
+            <strong>od 150 zł</strong>
+        </div>
+
+        <div class="cennik-pozycja">
+            <span>Serwis klimatyzacji</span>
+            <strong>od 180 zł</strong>
+        </div>
+    </div>
+</section>
+
+<section id="kontakt">
+    <h2>Umów wizytę</h2>
+    <p>Wypełnij formularz, a skontaktujemy
+       się w sprawie terminu.</p>
+
+    <form
+        action="https://formspree.io/f/mdeabrod"
+        method="POST"
+        id="formularz-wizyty"
+    >
+        <label for="imie">Imię i nazwisko</label>
+        <input type="text" id="imie"
+               name="imie" required>
+
+        <label for="email">Adres e-mail</label>
+        <input type="email" id="email"
+               name="email" required>
+
+        <label for="usluga">Rodzaj usługi</label>
+        <select id="usluga" name="usluga" required>
+            <option value="">Wybierz usługę</option>
+            <option>Wymiana oleju</option>
+            <option>Diagnostyka komputerowa</option>
+            <option>Naprawa hamulców</option>
+            <option>Serwis klimatyzacji</option>
+        </select>
+
+        <label for="data">Preferowana data</label>
+        <input type="date" id="data"
+               name="data" required>
+
+        <p class="privacy-note">Projekt demonstracyjny. Nie podawaj prawdziwych danych osobowych. Formularz przesyła zgłoszenie do zewnętrznej usługi Formspree i nie potwierdza terminu wizyty.</p>
+
+        <button type="submit">
+            Wyślij zgłoszenie
+        </button>
+    </form>
+</section>
+    </main>
+
+    <footer>
+        <p>© 2026 AutoPro Serwis | Projekt demo</p>
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>
